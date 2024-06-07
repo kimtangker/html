@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>나의 포트폴리오</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div>
+  <header>
+    <nav>
+      <ul>
+        <li>
+          <button id="darkModeToggle" class="toggle-button">다크모드</button>
+        </li>
+        <li><a href="#container">본인 소개</a></li>
+        <li><a href="#technologies">관심 기술</a></li>
+        <li><a href="#companies">관심 기업</a></li>
+        <li><a href="#plans">미래 계획</a></li>
+        <li><a href="#drawingCanvas">메모장</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <br><br><br>
+    <section id="container" class="container">
+      <div class="buttons">
+        <table>
+          <tr>
+            <td class="button-cell">
+              <button onclick="showInfo('info1')">소개</button>
+            </td>
+            <td class="divider"></td>
+            <td class="button-cell">
+              <button onclick="showInfo('info2')">목표</button>
+            </td>
+            <td class="divider"></td>
+            <td class="button-cell">
+              <button onclick="showInfo('info7')">선정 동기</button>
+            </td>
+            <td class="divider"></td>
+            <td class="button-cell">
+              <button onclick="showInfo('info3')">성장 과정</button>
+            </td>
+            <td class="divider"></td>
+            <td class="button-cell">
+              <button onclick="showInfo('info4')">이슈</button>
+            </td>
+            <td class="divider"></td>
+            <td class="button-cell">
+              <button onclick="showInfo('info5')">역량</button>
+            </td>
+            <td class="divider"></td>
+            <td class="button-cell">
+              <button onclick="showInfo('info6')">프로젝트</button>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <section id="about" class="about">
+        <br>
+        <img src="cutySumin.jpg" alt="Profile Image" height="300" width="480">
+        <div class="info">
+          <article id="info1" class="info-section active">
+            <h2>소개</h2>
+            <p><strong>이름:</strong> 권수민</p>
+            <p><strong>나이:</strong> 24세</p>
+            <p><strong>학력:</strong> 공주대학교 컴퓨터공학부 소프트웨어전공 재학 중</p>
+            <p><strong>졸업 예정:</strong> 2026년 2월</p>
+            <p><strong>기타:</strong> 보안 세미나 참여, 모의 해킹 대회 참여 경험 및 정보보안 동아리 현 회장</p>
+            <hr>
+            <p id="hashtags">
+              #정보보안 #모의해킹 #리눅스 #사이버보안 #해킹대회
+            </p>
+            <div id="hashtagInputContainer" style="display: none;">
+              <input type="text" id="hashtagInput" placeholder="해시태그 입력">
+              <button onclick="addHashtag()">추가</button>
+            </div>
+            <button onclick="toggleHashtagInput()">태그 추가</button>
+          </article>
+          <article id="info2" class="info-section">
+            <h2>목표</h2>
+            <p>장기적으로 사이버 보안 분야의 전문가가 되어, 국가 및 기업의 정보 자산을 보호하는 역할을 수행하는 것이다. 이를 위해 최신 보안 기술을 습득하고, 다양한 보안 프로젝트에 참여하여 실무
+              경험을 쌓을 계획이다. 특히 네트워크 보안, 시스템 보안, 웹 보안 등 다양한 분야에서의 전문 지식을 통해 사이버 위협에 효과적으로 대응할 수 있는 능력을 갖추고자 한다. 또한, 국제적으로
+              인정받는 보안 자격증인 CISSP, CEH 등을 취득하여 글로벌 수준의 보안 전문가로서 역량을 강화할 것이다.
+            </p>
+            <p>단기적으로는 정보보안 동아리 회장으로서의 경험을 살려 다양한 보안 세미나와 모의 해킹 대회에 적극적으로 참여할 것이다. 이를 통해 최신 보안 트렌드를 파악하고, 실전에서의 문제 해결
+              능력을
+              향상시켜 안전한 정보 환경을 조성하는 데 기여하고자 한다.</p>
+          </article>
+          <article id="info7" class="info-section">
+            <h2>선정 동기</h2>
+            <p>IT 업계는 호황과 불황의 주기가 존재하며, 특정 분야는 경제 상황에 따라 큰 변동을 겪는다. 하지만, 보안 분야는 이러한 주기의 영향을 비교적 덜 받는 안정적인 분야로 알려져 있다.
+              이는
+              사이버 보안이 현대 사회에서 필수적인 요소로 자리 잡고 있기 때문이다. 정보 자산을 보호하고 사이버 위협으로부터 방어하는 보안 기술의 중요성은 경제 상황과 무관하게 꾸준히 강조되어 왔다.
+              또한, 보안 분야는 항상 꾸준한 수요가 있어 안정적인 직업 환경을 제공한다.</p>
+            <p>보안의 중요성은 기업뿐만 아니라 국가의 안전과도 직결된다. 사이버 공격의 빈도와 강도가 날로 증가하면서, 보안 전문가의 필요성이 지속적으로 대두되고 있다. 따라서 보안 분야는 다른 IT
+              분야에 비해 경기 변동에 덜 민감하며, 안정적인 직업 환경을 제공한다. 이러한 점에서 보안 분야에 대한 관심을 가지게 되었다.</p>
+          </article>
+          <article id="info3" class="info-section">
+            <h2>성장 과정</h2>
+            <p>어렸을 때부터 컴퓨터에 관심이 많았던 나는 프로그래밍에 대한 열정을 가지고 있었다. 그러나 주변에서 프로그래밍 직종이 "3D 업종"으로 불리는 것을 알게 되었다. "Difficult,
+              Dangerous, Dirty"라는 의미의 3D 업종이라는 말은 프로그래밍 직종이 힘들고 스트레스가 많다는 것을 나타내는 말이다.<br><br>
+
+              그럼에도 불구하고 나는 프로그래밍을 좋아했고, 이 분야에서 성장하고 싶었다. 최근 AI 기술의 발전으로 IT 업계에 큰 변화가 일어나고 있다. AI 기술의 발전으로 인해 IT 산업에 호황과
+              불황이 반복되고 있으며, 이로 인해 IT 업계의 고용 불안정성이 높아지고 있다.<br><br>
+
+              이러한 상황 속에서도 정보 보안 분야는 상대적으로 편차가 적은 편이다. 정보 보안은 기밀성, 무결성, 가용성을 지키는 것이 핵심이며, 이를 위해서는 체계적인 보안 관리가 필요하다.
+              <br><br>
+              따라서 나는 정보 보안 분야에 관심을 갖게 되었다. 정보 보안은 IT 업계의 변화 속에서도 안정적인 분야로 여겨지며, 보안 관리의 중요성이 점점 더 커지고 있다. 이를 통해 IT 업계의
+              변화에 유연하게 대응할 수 있을 것이라 생각한다.</p>
+          </article>
+          <article id="info4" class="info-section">
+            <h2>이슈</h2>
+            <p>&nbsp&nbsp최근 사회이슈 중 중요하게 생각하는 분야는 국제 정보보안 자격 시험의 한국 철수이다. 특히 CISSP와 같은 국제적으로 인정받는 자격 시험이 한국에서 응시할 수 없게 된
+              것은 큰
+              문제이다.
+              이는 한국의 사이버 보안 역량 및 전문성 인정에 큰 영향을 미친다. 이러한 상황은 한국이 글로벌 사이버 보안 무대에서의 입지를 잃을 수 있음을 시사하며, 따라서 한국의 정보보안 교육과 국제
+              협력 강화가 시급하다고 본다.
+              <br><br>
+              &nbsp&nbsp첫째, 정부는 정보보호 산업의 글로벌 경쟁력 확보 전략을 강화해야 한다. 현재 과학기술정보통신부의 전략은 주로 기업 지원에 집중되어 있지만, 개인의 자격증 취득 및 전문성
+              향상을 위한 지원도
+              필요하다. 예를 들어, 국제 자격 시험을 한국어로 치를 수 있도록 하는 것과 같은 국제적 차원의 협상과 지원이 필요하다.
+              <br><br>
+              &nbsp&nbsp둘째, 국내 자격 시험의 국제적 인정을 확대해야 한다. 한국 내에서 시행되는 사이버 보안 관련 자격 시험이 국제적으로 인정받을 수 있도록 국제 표준화 기구와의 협력을
+              강화하는 것이 중요하다.
+              이는 국제 무대에서의 한국의 전문성을 인정받는 길이며, 국제 자격 시험의 국내 철수로 인한 공백을 메울 수 있는 방법이다.
+              <br><br>
+              &nbsp&nbsp셋째, 국내에서의 사이버 보안 교육과 연구 개발을 적극적으로 지원해야 한다. 정보보안 분야의 연구와 혁신은 국제 경쟁력을 갖추는 데 있어 필수적이다. 정부와 기업이 학교와
+              연구소에서의 사이버
+              보안 교육과 R&D를 지원함으로써, 국내 전문가들이 국제 자격을 취득하고 글로벌 보안 문제에 대응할 수 있는 역량을 기를 수 있다.
+
+              이러한 접근을 통해 한국은 글로벌 사이버 보안 산업에서 중요한 역할을 할 수 있으며, 국제 사회에서의 위상을 강화할 수 있을 것이다.</p>
+          </article>
+          <article id="info5" class="info-section">
+            <h2>역량</h2>
+            <p>버프스위트(Burp Suite), pwntools, IDA Pro 등 다양한 보안 도구를 사용한 경험이 있다. 버프스위트를 통해 웹 애플리케이션의 취약점을 탐지하고 분석한 경험이 있으며,
+              pwntools를 사용하여 익스플로잇 코드를 작성하고 디버깅한 적이 있다. 또한, IDA Pro를 이용한 리버싱을 통해 악성 코드 분석 및 소프트웨어의 작동 원리를 이해하는 데 도움을
+              받았다. 이러한 도구들을 통해 다양한 보안 문제를 해결하고 시스템의 취약점을 분석하는 경험을 쌓았다.</p>
+          </article>
+          <article id="info6" class="info-section">
+            <h2>프로젝트</h2>
+            <p>
+              최근 열린 사이버보안 경진대회인 세종 핵테온에 참가해 Jeopardy 형식으로 출제된 문제들을 해결했다. 이 대회는 MISC, 암호학, 웹, 디지털 포렌식, 네트워크, 포너블, 모바일 등
+              7개 분야에서
+              다양한 역량을 요구했다. 기술적으로 가장 어려웠던 부분은 포너블 분야의 문제로, 시스템의 취약점을 찾아 쉘코드를 작성해 플래그를 얻어야 했다.
+
+            </p>
+            <p> 먼저, 파일 분석과 환경 설정, 버퍼 오버플로우 이해, pwntools 사용 및 익스플로잇 코드 작성, 플래그 파일 획득 등의 단계가
+              필요했다. ELF 파일의 구조와 C 언어 코드 분석 하며 시작했고, 버퍼 오버플로우를 이해하는 과정에서는 메모리 레이아웃과 스택 구조를 학습하여 취약점을 파악했다. 다양한 자료를
+              참고해 쉘코드를 작성하고 주입하는 방법을 익혔다. pwntools를 사용해 익스플로잇 코드를 작성하는 과정에서는 라이브러리의 사용법을 익히고, 디버깅을 통해 문제를 해결했다. 마지막으로 쉘을
+              획득한 후, 권한 문제를 해결하며 flag 파일을 성공적으로 읽어냈다.
+            </p>
+            <p>
+              결국 이러한 노력 끝에 포너블 분야의 문제를 성공적으로 해결할 수 있었다. 대회 당일 다른 팀들의 반응을 보면, 포너블 문제가 가장 어려웠던 것으로 나타났다.
+            </p>
+          </article>
+        </div>
+      </section>
+    </section>
+    <br><br><br>
+    <hr>
+    <br><br><br>
+    <section id="technologies">
+      <h2 class="section-title">관심 기술</h2>
+      <div class="tech-gallery">
+        <div class="tech-item"
+             onclick="openTechInfo('시스템 해킹', '시스템 해킹은 컴퓨터 시스템의 취약점을 공격하여 무단으로 접근 권한을 획득하는 다양한 기술을 포함한다. 그중 버퍼 오버플로우는 이러한 공격 중 가장 널리 알려진 유형으로, 프로그램이 메모리의 버퍼에 너무 많은 데이터를 저장하려고 할 때 발생한다. 특히 C나 C++과 같은 저수준 언어에서 자주 발생하는 이 취약점은 프로그램이 사용자로부터 받은 데이터의 크기를 적절히 검사하지 않아 인접 메모리 영역을 침범하게 하고, 결과적으로 중요한 메모리 데이터가 덮어쓰여질 수 있다.<br><br> 공격자는 버퍼 오버플로우 취약점을 이용하여 익스플로잇을 개발할 수 있다. 익스플로잇은 특정 보안 취약점을 활용하여 공격자의 코드가 실행될 수 있도록 하는 코드나 페이로드를 포함한다. 이 과정에서 메모리의 반환 주소가 조작되어, 메모리의 실행 흐름이 공격자가 원하는 위치로 변경된다.<br><br> 쉘코드는 익스플로잇에 의해 실행되는 페이로드의 한 형태로, 공격자에게 시스템 명령을 직접 실행할 수 있는 쉘에 접근할 수 있는 권한을 제공한다. 버퍼 오버플로우를 통해 쉘코드가 삽입된 메모리 주소로 실행 흐름이 변경될 때 활성화되며, 이를 통해 공격자는 시스템을 제어하거나 데이터에 접근할 수 있게 된다. 이러한 방식으로 쉘코드는 공격자가 시스템 내에서 권한을 확장하는 데 사용된다.')"
+             style="background-image: url('img_2.png');">
+          <p>시스템 해킹</p>
+        </div>
+
+        <div class="tech-item"
+             onclick="openTechInfo('웹 해킹', '웹 해킹은 웹 애플리케이션의 보안 취약점을 이용해 데이터를 무단 접근하거나 시스템을 조작하는 다양한 공격 기법을 말한다. 클라이언트 측에서는 크로스 사이트 스크립팅(XSS)과 크로스 사이트 요청 위조(CSRF)와 같은 공격이 포함되어, 이를 통해 사용자의 세션 쿠키를 탈취하거나 사용자를 속여 의도하지 않은 행동을 하게 만들 수 있다.<br><br> 서버 측에서는 SQL 인젝션, 명령어 인젝션, 서버 측 요청 위조(SSRF) 등의 공격이 발생할 수 있는데, 이러한 공격은 데이터베이스 쿼리를 조작하거나 서버의 내부 명령을 실행시켜 정보를 유출하거나 조작할 위험이 있다.<br><br> 버프 스위트(Burp Suite)는 이러한 웹 해킹을 탐지하고 분석하는 데 사용되는 통합 보안 플랫폼이다. 이 도구는 인터셉트 프록시, 스캐너, 인트루더 및 리피터 기능을 제공하여 사용자가 HTTP 요청을 조작하고 응답을 분석할 수 있게 하며, XSS, CSRF, SQL 인젝션 등의 공격을 모의 테스트하고 대응하는 데 필수적이다. 이를 통해 보안 전문가들은 웹 애플리케이션의 취약점을 식별하고 평가할 수 있으며, 적절한 보안 조치를 취할 수 있다.')"
+             style="background-image: url('img_3.png');">
+          <p>웹 해킹</p>
+        </div>
+
+        <div class="tech-item"
+             onclick="openTechInfo('네트워크 해킹', '네트워크 해킹은 네트워크 시스템의 보안 취약점을 공격하여 무단 접근을 획득하는 기술이다. 이 과정에서 공격자는 Wi-Fi 보안 프로토콜의 약점, 미보호 네트워크 연결, 그리고 네트워크 서비스의 취약점을 이용한다. 특히 무선 네트워크에서는 WEP 및 WPA/WPA2 암호화의 취약점을 이용하는 것이 일반적이며, 이를 통해 공격자는 네트워크 트래픽을 스니핑하고 중간자 공격을 수행하여 데이터를 탈취하거나 네트워크 트래픽을 조작할 수 있다.<br><br> 공격자는 ARP 스푸핑이나 DNS 스푸핑과 같은 기술을 사용하여 네트워크 트래픽을 가로챌 수 있다. ARP 스푸핑은 네트워크 내에서 장치 간의 연결을 독점하여 데이터 흐름을 자신의 시스템으로 우회시키는 방법이다. DNS 스푸핑은 공격자가 조작된 DNS 응답을 통해 사용자를 가짜 웹사이트로 유도하여 추가적인 공격을 수행하거나 정보를 탈취하는 방법이다.<br><br> 이러한 공격을 감지하고 방어하기 위해 네트워크 보안 전문가들은 패킷 분석 도구인 Wireshark를 사용하여 네트워크 트래픽을 모니터링하고 분석한다. Wireshark를 이용하면 네트워크 상의 패킷을 실시간으로 캡처하고, 패킷의 출처와 목적지, 전송된 데이터의 내용을 상세하게 검토할 수 있으며, 이를 통해 비정상적인 네트워크 활동을 식별하고 적절한 보안 조치를 취할 수 있다.')"
+             style="background-image: url('img_4.png');">
+          <p>네트워크 해킹</p>
+        </div>
+
+        <div class="tech-item"
+             onclick="openTechInfo('리버싱', '리버싱은 소프트웨어의 바이너리 코드를 분석하여 작동 원리를 이해하거나 원본 소스 코드를 복원하는 기술이다. 이 과정은 주로 보안 연구, 악성 코드 분석, 그리고 소프트웨어 라이센스 검증과 같은 보안 측면에서 중요하게 활용된다. 특히, 소프트웨어가 어떻게 작동하는지를 파악하고, 보안 취약점을 찾거나 기능을 수정하기 위해 사용된다.<br><br> 리버싱 과정에서 난독화된 코드는 큰 도전 과제 중 하나이다. 난독화는 코드를 의도적으로 복잡하게 만들어, 리버싱을 어렵게 하는 보안 기법이다. 이를 해석하려면 고급 분석 기술과 도구가 필요하며, IDA(Interactive DisAssembler)와 같은 도구가 이에 널리 사용된다. IDA는 강력한 디스어셈블러와 디버거를 제공하여, 다양한 아키텍처의 바이너리 파일들을 분석할 수 있게 해주고, 난독화된 코드나 복잡한 알고리즘도 효과적으로 처리할 수 있다.<br><br> 리버싱 전문가들은 IDA를 사용하여 실행 파일을 세부적으로 분해하고, 각종 함수와 라이브러리 호출을 추적한다. 이러한 분석을 통해 리버싱 과정에서 발견된 정보는 소프트웨어의 보안 강화, 라이센스 컴플라이언스 확인, 또는 악성 코드의 행동을 이해하는 데 필수적이다.')"
+             style="background-image: url('img.png');">
+          <p>리버싱</p>
+        </div>
+
+        <div class="tech-item"
+             onclick="openTechInfo('암호학', '암호학은 데이터의 안전한 전송과 저장을 보장하기 위해 정보를 암호화하고 해독하는 기술이다. 이 분야는 고전 암호부터 현대의 복잡한 암호 알고리즘에 이르기까지 다양한 방법론을 포함한다. 고전 암호는 주로 간단한 치환과 전치를 사용하는 반면, 현대 암호는 수학적 원리와 알고리즘을 기반으로 복잡한 데이터 암호화를 수행한다.<br><br> 암호 수학은 암호학의 기초를 이루며, 정수론과 선형대수학 같은 수학적 개념을 활용하여 암호 알고리즘을 설계하고 분석한다. 이러한 수학적 도구들은 암호 알고리즘의 안전성을 평가하고, 약점을 찾아내는 데 필수적이다.<br><br> 암호학의 실제 적용 예로는 블록 암호의 운영 모드, 패딩 오라클 공격 및 길이 확장 공격과 같은 다양한 암호화 공격 기법들이 있다. 이러한 공격 기법들은 암호 시스템의 취약점을 식별하고 해결함으로써, 더 강력하고 안전한 암호화 방법을 개발하는 데 기여한다.')"
+             style="background-image: url('img_1.png');">
+          <p>암호학</p>
+        </div>
+
+      </div>
+    </section>
+    <br><br>
+    <hr>
+    <br><br>
+    <section id="companies">
+      <h2 class="section-title">관심 기업</h2>
+      <div class="company-item" style="background-image: url('company.png');" onclick="openCompanyModal(1)">
+        <p>티오리 정보</p>
+      </div>
+      <div class="company-item" style="background-image: url('company2.jpg');" onclick="openCompanyModal(2)">
+        <p>시큐아이 정보</p>
+      </div>
+      <div class="company-item" style="background-image: url('company3.jpg');" onclick="openCompanyModal(3)">
+        <p>지니언스 정보</p>
+      </div>
+    </section>
+
+
+    <br><br><br>
+    <hr>
+    <br><br><br>
+    <section id="plans">
+      <h2 class="section-title">미래 계획</h2>
+      <div class="timeline" id="timeline">
+      </div>
+      <div id="middleEventDescription" class="middle-event-description">
+      </div>
+    </section>
+    <br><br><br>
+    <hr>
+    <br><br><br>
+    <section id="canvasSection">
+      <h2 class="section-title">그리기 메모장</h2>
+      <div class="canvas-container">
+        <canvas id="drawingCanvas" width="1200" height="600"></canvas>
+        <div class="canvas-controls">
+          <button onclick="clearCanvas()">지우기</button>
+          <input type="color" id="colorPicker" value="#000000">
+          <input type="range" id="brushSize" min="1" max="50" value="5">
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <footer>
+    <p>&copy; 2024 권수민. 모든 권리 보유.</p>
+  </footer>
+</div>
+
+
+<div id="techModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <h2 id="modalTitle"></h2>
+    <p id="modalDescription"></p>
+  </div>
+</div>
+
+<script src="scripts.js"></script>
+</body>
+</html>
